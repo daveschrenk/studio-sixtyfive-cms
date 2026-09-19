@@ -4,6 +4,9 @@ Multi-tenant Next.js directory platform and Studio Sixtyfive CMS. One Vercel
 project serves several domains with host-isolated content, metadata, sitemaps,
 robots rules, and administration.
 
+Canonical private repository:
+`https://github.com/daveschrenk/studio-sixtyfive-cms`
+
 ## Live Domains
 
 - `studiosixtyfive.com` - CMS and factory hub
@@ -50,7 +53,8 @@ cached for one hour.
 
 ## Deployment
 
-The Vercel project is `davidschrenk-gmailcoms-projects/dfw-garage-install`.
+The Vercel project is `davidschrenk-gmailcoms-projects/dfw-garage-install` and
+is connected to this repository's `main` branch.
 Production deploys must pass `npm run build` before release. After deployment,
 verify `https://studiosixtyfive.com/admin/sites/` and one public route on each
 tenant domain.

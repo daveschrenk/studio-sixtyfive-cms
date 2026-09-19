@@ -24,3 +24,6 @@ All notable production changes are recorded here.
 - Deployed and browser-verified the integration at
   `https://studiosixtyfive.com/admin/sites/`.
 - Established this recovered production source as the Git repository baseline.
+- Created the private canonical repository at
+  `https://github.com/daveschrenk/studio-sixtyfive-cms` and connected it to the
+  existing Vercel project for commit-based deployments.

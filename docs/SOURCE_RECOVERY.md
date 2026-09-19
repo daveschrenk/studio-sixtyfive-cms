@@ -41,7 +41,9 @@ files, `.vercel`, build output, and dependencies are excluded by `.gitignore`.
 
 ## Canonical Source Going Forward
 
-This Git repository is the canonical source. Future production changes should
-be committed here and deployed from a reviewed commit. Recovering deployment
-files from Vercel should be treated as an emergency procedure, not the normal
-development workflow.
+The private GitHub repository
+`https://github.com/daveschrenk/studio-sixtyfive-cms` is the canonical source.
+Its `main` branch is connected to the existing Vercel project. Future
+production changes should be committed here and deployed from a reviewed
+commit. Recovering deployment files from Vercel should be treated as an
+emergency procedure, not the normal development workflow.
