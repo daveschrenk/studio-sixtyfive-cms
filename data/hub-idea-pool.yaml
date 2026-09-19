@@ -1,0 +1,1009 @@
+meta:
+  title: Big Dir hub idea pool
+  audience: Andy/Stef hub-idea-pool-ingest
+  rules: Knowledge/Hub-idea-qualify-rules.md
+  seeded: '2026-09-02'
+  updated: '2026-09-02'
+  notes: 'garage-door-install-dfw REMOVED per Dave. dumpster-rental-jacksonville REMOVED (Dave drop).
+    Gate3 Google results applied 2026-09-02/03 UTC from /workspace/serp-gate3-*.json: towing PASS 11/9
+    (pilot Dallas); fence-company PASS 18/2 (pilot Charlotte); tree-service FAIL floor 3/17 (kept for
+    Chief swap after dog+storage Gate3); dog-boarding HOLD mid-run 11/0/9 blocked; self-storage-jacksonville
+    HOLD unchanged (Gate3 not run). Do not invent SERP/Planner.'
+ideas:
+- niche_slug: towing-dallas
+  display_name: Towing Dallas
+  industry: Towing
+  localized: true
+  near_pass: false
+  run_date: '2026-09-02'
+  primary_serp_term: towing
+  planner_country: United States
+  planner_language: English
+  planner_network: Google
+  planner_window_start: '2025-08-01'
+  planner_window_end: '2026-07-31'
+  planner_terms:
+  - term: towing
+    role: head
+    intent_class: commercial_local
+    volume_range: 100K-1M
+    competition: Low
+    bid_low: $2.22
+    bid_high: $9.21
+    evidence_url: Knowledge/Keyword-planner-live.md
+  - term: towing near me
+    role: commercial_local
+    intent_class: commercial_local
+    volume_range: 100K-1M
+    competition: Medium
+    bid_low: $2.49
+    bid_high: $9.14
+    evidence_url: Knowledge/Keyword-planner-live.md
+  - term: tow truck near me
+    role: supporting
+    intent_class: commercial_local
+    volume_range: 100K-1M
+    competition: High
+    bid_low: $2.85
+    bid_high: $9.67
+    evidence_url: Knowledge/Keyword-planner-live.md
+  policy_class: clean
+  policy_review_date: '2026-09-02'
+  policy_reviewer: Kyle
+  serp_engine: Google
+  serp_city_set_version: Directory-serp-test top-20 v1 (2026-08-30)
+  serp_query_template: '{primary_serp_term} {city}'
+  serp_results:
+  - city: New York
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Towing&find_loc=New+York%2C+NY
+    evidence_url: https://www.google.com/search?q=towing+New+York
+    title: THE BEST 10 TOWING IN NEW YORK, NY
+  - city: Los Angeles
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.opgla.com/
+    evidence_url: https://www.google.com/search?q=towing+Los+Angeles
+    title: Official Police Garage Association of LA
+  - city: Chicago
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.towingchicago.com
+    evidence_url: https://www.google.com/search?q=towing+Chicago
+    title: Chicago Towing | A Local Chicago Towing
+  - city: Houston
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.houstontexastowing.net
+    evidence_url: https://www.google.com/search?q=towing+Houston
+    title: Houston Texas Towing
+  - city: Phoenix
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.prioritytow.com
+    evidence_url: https://www.google.com/search?q=towing+Phoenix
+    title: Priority Towing Phoenix AZ – 24hr
+  - city: Philadelphia
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.abobstowing.com
+    evidence_url: https://www.google.com/search?q=towing%20Philadelphia
+    title: A Bob's Towing | 24/7 Philadelphia Towing | Call Now
+  - city: San Antonio
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.texastowing.com
+    evidence_url: https://www.google.com/search?q=towing+San+Antonio
+    title: 'Texas Towing: Tow Truck San Antonio | 24/7 Towing & Recovery'
+    note: Google captcha /sorry 2026-09-02T23:18:56Z
+  - city: San Diego
+    classification: FAIL
+    result_type: government
+    result_url: https://www.sandiego.gov/police/services/vehicle-impounds
+    evidence_url: https://www.google.com/search?q=towing+San+Diego
+    title: Vehicle Impounds and Towing - City of San Diego
+  - city: Dallas
+    classification: PASS
+    result_type: local_business
+    result_url: https://dallastowtrucks.com
+    evidence_url: https://www.google.com/search?q=towing+Dallas
+    title: 24/7 Tow Trucks Dallas | Emergency Roadside Assistance
+  - city: San Jose
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Towing&find_loc=San+Jose%2C+CA
+    evidence_url: https://www.google.com/search?q=towing+San+Jose
+    title: THE BEST 10 TOWING IN SAN JOSE, CA
+  - city: Austin
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Towing&find_loc=Austin%2C+TX
+    evidence_url: https://www.google.com/search?q=towing+Austin
+    title: THE BEST 10 TOWING IN AUSTIN, TX
+  - city: Jacksonville
+    classification: PASS
+    result_type: local_business
+    result_url: https://asaptowing.net/local-towing
+    evidence_url: https://www.google.com/search?q=towing+Jacksonville
+    title: Towing Jacksonville & NE Florida - Tow Truck Near You (ASAP Towing)
+  - city: Fort Worth
+    classification: PASS
+    result_type: local_business
+    result_url: https://fwtow.com
+    evidence_url: https://www.google.com/search?q=towing+Fort+Worth
+    title: Towing Fort Worth | 24 Hour Service
+  - city: Columbus
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Towing&find_loc=Columbus%2C+OH
+    evidence_url: https://www.google.com/search?q=towing+Columbus
+    title: THE BEST 10 TOWING IN COLUMBUS, OH
+  - city: Charlotte
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Towing&find_loc=Charlotte%2C+NC
+    evidence_url: https://www.google.com/search?q=towing+Charlotte
+    title: THE BEST 10 TOWING IN CHARLOTTE, NC
+  - city: Indianapolis
+    classification: PASS
+    result_type: local_business
+    result_url: https://superiortowinginc.com
+    evidence_url: https://www.google.com/search?q=towing+Indianapolis
+    title: Emergency Towing, Heavy Duty Towing, Roadside Assistance (Superior Towing)
+  - city: San Francisco
+    classification: FAIL
+    result_type: government
+    result_url: https://www.sfmta.com/getting-around/drive-park/towed-vehicles
+    evidence_url: https://www.google.com/search?q=towing+San+Francisco
+    title: Towed Vehicles - SFMTA
+  - city: Seattle
+    classification: FAIL
+    result_type: government
+    result_url: https://www.seattle.gov/your-rights-as-a-customer/find-a-towed-car
+    evidence_url: https://www.google.com/search?q=towing+Seattle
+    title: Find a Towed Car - Your rights as a customer (Seattle.gov)
+  - city: Denver
+    classification: PASS
+    result_type: local_business
+    result_url: https://redstowingdenver.com
+    evidence_url: https://www.google.com/search?q=towing+Denver
+    title: 'Red''s Towing Services: Towing Services Denver'
+  - city: Oklahoma City
+    classification: PASS
+    result_type: local_business
+    result_url: https://arrowwrecker.com
+    evidence_url: https://www.google.com/search?q=towing+Oklahoma+City
+    title: Towing OKC - Arrow Wrecker Service | Towing & Vehicle
+  serp_pass_cities:
+  - Chicago
+  - Houston
+  - Phoenix
+  - Philadelphia
+  - San Antonio
+  - Dallas
+  - Jacksonville
+  - Fort Worth
+  - Indianapolis
+  - Denver
+  - Oklahoma City
+  serp_fail_cities:
+  - New York
+  - Los Angeles
+  - San Diego
+  - San Jose
+  - Austin
+  - Columbus
+  - Charlotte
+  - San Francisco
+  - Seattle
+  serp_redo_cities: []
+  serp_pass_count: 11
+  serp_fail_count: 9
+  serp_redo_count: 0
+  google_completed:
+    pass: 11
+    fail: 9
+    redo: 0
+    blocked: false
+  pilot_geo: Dallas
+  pilot_geo_type: metro
+  provisional_metro_candidate: null
+  install_vs_repair: n/a
+  ranking_method: 'Non-housing Branch B: metro population among Gate3 PASS set; Dallas preferred large
+    metro (Houston also PASS)'
+  ranking_evidence_urls:
+  - /workspace/serp-gate3-towing.json
+  maps_category: Towing service
+  fragments:
+  - emergency towing
+  - light-duty towing
+  - motorcycle towing
+  - roadside lockout
+  - jump start
+  enrichment_attributes:
+  - service area
+  - hours
+  - 24/7 availability
+  - reviews
+  - truck types
+  gate_results:
+    gate_1: PASS
+    gate_2: PASS
+    gate_3: PASS
+    gate_4: PASS
+    gate_5: PASS
+  yellow_flags:
+  - low_competition:towing
+  evidence_urls:
+  - Knowledge/Keyword-planner-live.md
+  - Knowledge/Hub-idea-qualify-rules.md
+  - /workspace/serp-gate3-towing.json
+  - /workspace/pool-redo-progress.md
+  status: PASS
+  fail_reasons: []
+  hold_reasons: []
+- niche_slug: fence-charlotte
+  display_name: Fence Charlotte
+  industry: Fence
+  localized: true
+  near_pass: false
+  run_date: '2026-09-02'
+  primary_serp_term: fence company
+  planner_country: United States
+  planner_language: English
+  planner_network: Google
+  planner_window_start: '2025-08-01'
+  planner_window_end: '2026-07-31'
+  planner_terms:
+  - term: fence company
+    role: head
+    intent_class: commercial_local
+    volume_range: null
+    competition: null
+    bid_low: null
+    bid_high: null
+    evidence_url: Knowledge/Keyword-planner-live.md
+  - term: fence company near me
+    role: commercial_local
+    intent_class: commercial_local
+    volume_range: 100K-1M
+    competition: High
+    bid_low: $4.14
+    bid_high: $24.14
+    evidence_url: Knowledge/Keyword-planner-live.md
+  policy_class: clean
+  policy_review_date: '2026-09-02'
+  policy_reviewer: Kyle
+  serp_engine: Google
+  serp_city_set_version: Directory-serp-test top-20 v1 (2026-08-30)
+  serp_query_template: '{primary_serp_term} {city}'
+  serp_results:
+  - city: New York
+    classification: PASS
+    result_type: local_business
+    result_url: https://nysfence.com
+    evidence_url: https://www.google.com/search?q=fence+company+New+York
+    title: Upstate & Western NY Fencing | New York State Fence Co. Inc.
+  - city: Los Angeles
+    classification: PASS
+    result_type: local_business
+    result_url: https://jjfencelosangeles.com
+    evidence_url: https://www.google.com/search?q=fence+company+Los+Angeles
+    title: Chain Link, Iron, Wood, Vinyl Fencing Los Angeles County (J&J Fence)
+  - city: Chicago
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.floresfencecompany.com
+    evidence_url: https://www.google.com/search?q=fence+company+Chicago
+    title: Flores Fence Company | Fence Installation & Repair In Chicago
+  - city: Houston
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.riograndefence.net
+    evidence_url: https://www.google.com/search?q=fence+company+Houston
+    title: 'Rio Grande Fence Company: Fence Installations | Houston, TX'
+  - city: Phoenix
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.phoenixfence.com
+    evidence_url: https://www.google.com/search?q=fence+company+Phoenix
+    title: Industrial, Commercial Fence Contractor | Mesa, Phoenix, AZ
+  - city: Philadelphia
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.northeastfence.net
+    evidence_url: https://www.google.com/search?q=fence+company+Philadelphia
+    title: Local Residential & Commercial Fence Contractor Langhorne (Northeast Fence & Iron Works)
+  - city: San Antonio
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.alamofencesa.com
+    evidence_url: https://www.google.com/search?q=fence+company+San+Antonio
+    title: Fence Contractor — San Antonio, TX — Alamo Fence
+  - city: San Diego
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.sandiegofence.com
+    evidence_url: https://www.google.com/search?q=fence+company+San+Diego
+    title: San Diego Fence Company | CA Fencing Installation & Rentals
+  - city: Dallas
+    classification: PASS
+    result_type: local_business
+    result_url: https://fencecodallas.com
+    evidence_url: https://www.google.com/search?q=fence+company+Dallas
+    title: 'Fence Co Dallas: Custom Metal & Wrought Iron Fence Dallas'
+  - city: San Jose
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Fence+Contractor&find_loc=San+Jose%2C+CA
+    evidence_url: https://www.google.com/search?q=fence+company+San+Jose
+    title: TOP 10 BEST Fence Contractor in San Jose, CA
+  - city: Austin
+    classification: PASS
+    result_type: local_business
+    result_url: https://austexfenceanddeck.com
+    evidence_url: https://www.google.com/search?q=fence+company+Austin
+    title: Austin Fence & Deck Company - Custom Fences, Decks
+  - city: Jacksonville
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.fenceoutlet.com/fence-company-jacksonville
+    evidence_url: https://www.google.com/search?q=fence+company+Jacksonville
+    title: Fence Company Jacksonville | Installation | Repair | Parts (Fence Outlet)
+  - city: Fort Worth
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Fences+%26+Gates&find_loc=Fort+Worth%2C+TX
+    evidence_url: https://www.google.com/search?q=fence+company+Fort+Worth
+    title: THE BEST 10 Fences & Gates in FORT WORTH, TX
+  - city: Columbus
+    classification: PASS
+    result_type: local_business
+    result_url: https://millsfencecolumbus.com
+    evidence_url: https://www.google.com/search?q=fence+company+Columbus
+    title: Professional Fence Company in Columbus Ohio | Mills Fence
+  - city: Charlotte
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.towncountryfence.com
+    evidence_url: https://www.google.com/search?q=fence+company+Charlotte
+    title: 'Town & Country Fence: Residential & Commercial Fence'
+  - city: Indianapolis
+    classification: PASS
+    result_type: local_business
+    result_url: https://goodshepherdfencecompany.com
+    evidence_url: https://www.google.com/search?q=fence+company+Indianapolis
+    title: 'Good Shepherd Fence Company: Indianapolis, Indiana Fence'
+  - city: San Francisco
+    classification: PASS
+    result_type: local_business
+    result_url: https://a1fencesf.com
+    evidence_url: https://www.google.com/search?q=fence+company+San+Francisco
+    title: A-1 Fence Company - Fence Builder, Deck Builder
+  - city: Seattle
+    classification: PASS
+    result_type: local_business
+    result_url: https://raincityfence.com
+    evidence_url: https://www.google.com/search?q=fence+company+Seattle
+    title: Fence Installation Services in Greater Seattle (Rain City Fence)
+  - city: Denver
+    classification: PASS
+    result_type: local_business
+    result_url: https://fencecompanyofdenver.com
+    evidence_url: https://www.google.com/search?q=fence+company+Denver
+    title: Denver Fence Company | Installation & Repair Since 1977
+  - city: Oklahoma City
+    classification: PASS
+    result_type: local_business
+    result_url: https://fenceokc.com
+    evidence_url: https://www.google.com/search?q=fence+company+Oklahoma+City
+    title: Fence OKC | Oklahoma City Fence Company
+  serp_pass_cities:
+  - New York
+  - Los Angeles
+  - Chicago
+  - Houston
+  - Phoenix
+  - Philadelphia
+  - San Antonio
+  - San Diego
+  - Dallas
+  - Austin
+  - Jacksonville
+  - Columbus
+  - Charlotte
+  - Indianapolis
+  - San Francisco
+  - Seattle
+  - Denver
+  - Oklahoma City
+  serp_fail_cities:
+  - San Jose
+  - Fort Worth
+  serp_redo_cities: []
+  serp_pass_count: 18
+  serp_fail_count: 2
+  serp_redo_count: 0
+  google_completed:
+    pass: 18
+    fail: 2
+    redo: 0
+    blocked: false
+  pilot_geo: Charlotte
+  pilot_geo_type: metro
+  provisional_metro_candidate: null
+  install_vs_repair: install
+  ranking_method: Gate3 PASS includes Charlotte; keep provisional metro as Gate4 pilot (Charlotte PASS)
+  ranking_evidence_urls:
+  - /workspace/serp-gate3-fence-company.json
+  maps_category: Fence contractor
+  fragments:
+  - wood fence install
+  - vinyl fence
+  - iron/aluminum fence
+  - fence repair
+  - gate install
+  enrichment_attributes:
+  - service area
+  - hours
+  - reviews
+  - materials offered
+  - licensing
+  gate_results:
+    gate_1: PASS
+    gate_2: PASS
+    gate_3: PASS
+    gate_4: PASS
+    gate_5: PASS
+  yellow_flags:
+  - primary_term_not_in_live_planner_pull:fence company
+  evidence_urls:
+  - Knowledge/Keyword-planner-live.md
+  - Knowledge/Hub-idea-qualify-rules.md
+  - /workspace/pool-redo-progress.md
+  - /workspace/serp-gate3-fence-company.json
+  status: PASS
+  fail_reasons: []
+  hold_reasons: []
+- niche_slug: tree-service-oklahoma-city
+  display_name: Tree service Oklahoma City
+  industry: Tree service
+  localized: true
+  near_pass: false
+  run_date: '2026-09-02'
+  primary_serp_term: tree service
+  planner_country: United States
+  planner_language: English
+  planner_network: Google
+  planner_window_start: '2025-08-01'
+  planner_window_end: '2026-07-31'
+  planner_terms:
+  - term: tree service
+    role: head
+    intent_class: commercial_local
+    volume_range: 10K-100K
+    competition: Low
+    bid_low: $3.88
+    bid_high: $20.38
+    evidence_url: Knowledge/Keyword-planner-live.md
+  - term: tree service near me
+    role: commercial_local
+    intent_class: commercial_local
+    volume_range: 100K-1M
+    competition: Medium
+    bid_low: $3.16
+    bid_high: $18.00
+    evidence_url: Knowledge/Keyword-planner-live.md
+  policy_class: clean
+  policy_review_date: '2026-09-02'
+  policy_reviewer: Kyle
+  serp_engine: Google
+  serp_city_set_version: Directory-serp-test top-20 v1 (2026-08-30)
+  serp_query_template: '{primary_serp_term} {city}'
+  serp_results:
+  - city: New York
+    classification: FAIL
+    result_type: government
+    result_url: https://www.nycgovparks.org/services/forestry
+    evidence_url: https://www.google.com/search?q=tree+service+New+York
+    title: Tree Services - NYC Parks
+  - city: Los Angeles
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Tree+Services&find_loc=Los+Angeles%2C+CA
+    evidence_url: https://www.google.com/search?q=tree+service+Los+Angeles
+    title: THE BEST 10 TREE SERVICES IN LOS ANGELES, CA
+  - city: Chicago
+    classification: FAIL
+    result_type: national_chain
+    result_url: https://www.davey.com/residential/tree-services-chicago-il
+    evidence_url: https://www.google.com/search?q=tree+service+Chicago
+    title: Tree Services In Chicago, IL - Davey Tree (national chain)
+  - city: Houston
+    classification: FAIL
+    result_type: national_chain
+    result_url: https://www.davey.com/residential/local-tree-services-houston-tx
+    evidence_url: https://www.google.com/search?q=tree+service+Houston
+    title: Local Tree Services In Houston, TX - Davey Tree (national chain)
+  - city: Phoenix
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Tree+Services&find_loc=Phoenix,+AZ
+    evidence_url: https://www.google.com/search?q=tree+service+Phoenix
+    title: THE BEST 10 Tree Services in PHOENIX, AZ - Yelp
+  - city: Philadelphia
+    classification: FAIL
+    result_type: government
+    result_url: https://www.phila.gov/services/trees-parks-the-environment/
+    evidence_url: https://www.google.com/search?q=tree+service+Philadelphia
+    title: Tree-related services - City of Philadelphia (.gov)
+  - city: San Antonio
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Tree+Services&find_loc=San+Antonio,+TX
+    evidence_url: https://www.google.com/search?q=tree+service+San+Antonio
+    title: THE BEST 10 TREE SERVICES IN SAN ANTONIO, TX - Yelp
+  - city: San Diego
+    classification: FAIL
+    result_type: national_chain
+    result_url: https://www.davey.com/residential/tree-services-san-diego-california
+    evidence_url: https://www.google.com/search?q=tree+service+San+Diego
+    title: Tree Services in San Diego, California - Davey Tree (national chain)
+  - city: Dallas
+    classification: FAIL
+    result_type: national_chain
+    result_url: https://www.davey.com/residential/davey-tree-services-dallas-texas
+    evidence_url: https://www.google.com/search?q=tree+service+Dallas
+    title: Davey Tree Services in Dallas, Texas (national chain)
+  - city: San Jose
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Tree+Services&find_loc=San+Jose,+CA
+    evidence_url: https://www.google.com/search?q=tree+service+San+Jose
+    title: THE BEST 10 TREE SERVICES IN SAN JOSE, CA - Yelp
+  - city: Austin
+    classification: FAIL
+    result_type: national_chain
+    result_url: https://www.davey.com/residential/tree-services-austin-texas
+    evidence_url: https://www.google.com/search?q=tree+service+Austin
+    title: Tree Services In Austin, Texas - Davey Tree (national chain)
+  - city: Jacksonville
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.robertstreeservice.com
+    evidence_url: https://www.google.com/search?q=tree+service+Jacksonville
+    title: 'Roberts Tree Service: Emergency Tree Trimming & Removal'
+  - city: Fort Worth
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Tree+Services&find_loc=Fort+Worth,+TX
+    evidence_url: https://www.google.com/search?q=tree+service+Fort+Worth
+    title: THE BEST 10 TREE SERVICES IN FORT WORTH, TX - Yelp
+  - city: Columbus
+    classification: FAIL
+    result_type: national_chain
+    result_url: https://www.davey.com/residential/tree-services-columbus-oh
+    evidence_url: https://www.google.com/search?q=tree+service+Columbus
+    title: Tree Services in Columbus, OH - Davey Tree (national chain)
+  - city: Charlotte
+    classification: FAIL
+    result_type: national_chain
+    result_url: https://www.davey.com/residential/tree-services-charlotte-nc
+    evidence_url: https://www.google.com/search?q=tree+service+Charlotte
+    title: Tree Services in Charlotte, NC - Davey Tree (national chain)
+  - city: Indianapolis
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Tree+Services&find_loc=Indianapolis,+IN
+    evidence_url: https://www.google.com/search?q=tree+service+Indianapolis
+    title: THE BEST 10 TREE SERVICES IN INDIANAPOLIS, IN - Yelp
+  - city: San Francisco
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Tree+Services&find_loc=San+Francisco,+CA
+    evidence_url: https://www.google.com/search?q=tree+service+San+Francisco
+    title: THE BEST 10 TREE SERVICES IN SAN FRANCISCO, CA - Yelp
+  - city: Seattle
+    classification: PASS
+    result_type: local_business
+    result_url: https://seattletreecare.org
+    evidence_url: https://www.google.com/search?q=tree+service+Seattle
+    title: Seattle Tree Care, Tree Service By Certified Arborists
+  - city: Denver
+    classification: FAIL
+    result_type: directory
+    result_url: https://www.yelp.com/search?find_desc=Tree+Services&find_loc=Denver,+CO
+    evidence_url: https://www.google.com/search?q=tree+service+Denver
+    title: THE BEST 10 TREE SERVICES IN DENVER, CO - Yelp
+  - city: Oklahoma City
+    classification: PASS
+    result_type: local_business
+    result_url: https://foresttreeservice.net
+    evidence_url: https://www.google.com/search?q=tree+service+Oklahoma+City
+    title: Forest Tree Service OKC - Affordable Tree Removal and Tree Care
+  serp_pass_cities:
+  - Jacksonville
+  - Seattle
+  - Oklahoma City
+  serp_fail_cities:
+  - New York
+  - Los Angeles
+  - Chicago
+  - Houston
+  - Phoenix
+  - Philadelphia
+  - San Antonio
+  - San Diego
+  - Dallas
+  - San Jose
+  - Austin
+  - Fort Worth
+  - Columbus
+  - Charlotte
+  - Indianapolis
+  - San Francisco
+  - Denver
+  serp_redo_cities: []
+  serp_pass_count: 3
+  serp_fail_count: 17
+  serp_redo_count: 0
+  google_completed:
+    pass: 3
+    fail: 17
+    redo: 0
+    blocked: false
+  pilot_geo: null
+  pilot_geo_type: null
+  provisional_metro_candidate: Oklahoma City
+  install_vs_repair: mixed
+  ranking_method: null
+  ranking_evidence_urls: []
+  maps_category: Tree service
+  fragments:
+  - tree removal
+  - tree trimming
+  - stump grinding
+  - emergency storm cleanup
+  - arborist consult
+  enrichment_attributes:
+  - service area
+  - hours
+  - reviews
+  - ISA certification
+  - emergency availability
+  gate_results:
+    gate_1: PASS
+    gate_2: PASS
+    gate_3: FAIL
+    gate_4: HOLD
+    gate_5: PASS
+  yellow_flags:
+  - low_competition:tree service
+  - below_preferred_volume:tree service
+  evidence_urls:
+  - Knowledge/Keyword-planner-live.md
+  - Knowledge/Hub-idea-qualify-rules.md
+  - /workspace/serp-gate3-tree-service.json
+  - /workspace/pool-redo-progress.md
+  status: FAIL
+  fail_reasons:
+  - 'Gate3 floor FAIL: Google PASS 3 of 20 (need >=5); FAIL 17; REDO 0 — below operating floor'
+  hold_reasons:
+  - Kept in pool pending Chief swap after dog-boarding + self-storage Gate3 complete; do not remove yet
+- niche_slug: dog-boarding-denver
+  display_name: Dog boarding Denver
+  industry: Dog boarding
+  localized: true
+  near_pass: true
+  run_date: '2026-09-02'
+  primary_serp_term: dog boarding
+  planner_country: United States
+  planner_language: English
+  planner_network: Google
+  planner_window_start: '2025-08-01'
+  planner_window_end: '2026-07-31'
+  planner_terms:
+  - term: dog boarding
+    role: head
+    intent_class: commercial_local
+    volume_range: null
+    competition: null
+    bid_low: null
+    bid_high: null
+    evidence_url: Knowledge/Keyword-planner-live.md
+  - term: dog boarding near me
+    role: commercial_local
+    intent_class: commercial_local
+    volume_range: 100K-1M
+    competition: Medium
+    bid_low: $2.24
+    bid_high: $9.00
+    evidence_url: Knowledge/Keyword-planner-live.md
+  - term: dog daycare / pet boarding
+    role: supporting
+    intent_class: commercial_local
+    volume_range: 10K-100K
+    competition: Low
+    bid_low: ~$1.66
+    bid_high: $9.45
+    evidence_url: Knowledge/Keyword-planner-live.md
+  policy_class: clean
+  policy_review_date: '2026-09-02'
+  policy_reviewer: Kyle
+  serp_engine: Google
+  serp_city_set_version: Directory-serp-test top-20 v1 (2026-08-30)
+  serp_query_template: '{primary_serp_term} {city}'
+  serp_results:
+  - city: New York
+    classification: PASS
+    result_type: local_business
+    result_url: https://dogmanyc.com
+    evidence_url: https://www.google.com/search?q=dog+boarding+New+York
+    title: DOGMA | Doggy daycare, overnight boarding, grooming
+  - city: Los Angeles
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.waghotels.com/hollywood
+    evidence_url: https://www.google.com/search?q=dog+boarding+Los+Angeles
+    title: Dog Boarding, Day Care, Grooming | Hollywood Pet Hotel - Wag Hotels (physical LA location)
+  - city: Chicago
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.waghotels.com/lincoln-park-chicago
+    evidence_url: https://www.google.com/search?q=dog+boarding+Chicago
+    title: Dog Boarding, Day Care, Grooming | Lincoln Park Pet Hotel - Wag Hotels
+  - city: Houston
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.roveroaks.com
+    evidence_url: https://www.google.com/search?q=dog+boarding+Houston
+    title: 'Rover Oaks Pet Resort: Dog Boarding & Daycare in Houston'
+  - city: Phoenix
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.secondhomepetresort.com
+    evidence_url: https://www.google.com/search?q=dog+boarding+Phoenix
+    title: Second Home Pet Resort | Phoenix, AZ | Dog Boarding
+  - city: Philadelphia
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.phillypethotel.com
+    evidence_url: https://www.google.com/search?q=dog+boarding+Philadelphia
+    title: Home | Philly Pet Hotel & Villas
+  - city: San Antonio
+    classification: PASS
+    result_type: local_business
+    result_url: https://lucysdoggydaycare.com
+    evidence_url: https://www.google.com/search?q=dog+boarding+San+Antonio
+    title: Boarding facility for dogs - Lucy's Doggy Daycare and Spa
+  - city: San Diego
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.waghotels.com/san-diego
+    evidence_url: https://www.google.com/search?q=dog+boarding+San+Diego
+    title: Dog Boarding, Day Care, Grooming | San Diego Pet Hotel - Wag Hotels
+  - city: Dallas
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.bhvtexas.com
+    evidence_url: https://www.google.com/search?q=dog+boarding+Dallas
+    title: Dallas Dog Boarding & Dog Daycare | Barking Hound Village
+  - city: San Jose
+    classification: PASS
+    result_type: local_business
+    result_url: https://www.dogtopia.com/san-jose
+    evidence_url: https://www.google.com/search?q=dog+boarding+San+Jose
+    title: Dog Daycare, Spa, Boarding - San Jose (Dogtopia franchise location)
+  - city: Austin
+    classification: PASS
+    result_type: local_business
+    result_url: https://austinpetranch.com
+    evidence_url: https://www.google.com/search?q=dog+boarding+Austin
+    title: Austin Pet Ranch
+  - city: Jacksonville
+    classification: REDO
+    result_type: null
+    result_url: null
+    evidence_url: null
+  - city: Fort Worth
+    classification: REDO
+    result_type: null
+    result_url: null
+    evidence_url: null
+  - city: Columbus
+    classification: REDO
+    result_type: null
+    result_url: null
+    evidence_url: null
+  - city: Charlotte
+    classification: REDO
+    result_type: null
+    result_url: null
+    evidence_url: null
+  - city: Indianapolis
+    classification: REDO
+    result_type: null
+    result_url: null
+    evidence_url: null
+  - city: San Francisco
+    classification: REDO
+    result_type: null
+    result_url: null
+    evidence_url: null
+  - city: Seattle
+    classification: REDO
+    result_type: null
+    result_url: null
+    evidence_url: null
+  - city: Denver
+    classification: REDO
+    result_type: null
+    result_url: null
+    evidence_url: null
+  - city: Oklahoma City
+    classification: REDO
+    result_type: null
+    result_url: null
+    evidence_url: null
+  serp_pass_cities:
+  - New York
+  - Los Angeles
+  - Chicago
+  - Houston
+  - Phoenix
+  - Philadelphia
+  - San Antonio
+  - San Diego
+  - Dallas
+  - San Jose
+  - Austin
+  serp_fail_cities: []
+  serp_redo_cities:
+  - Jacksonville
+  - Fort Worth
+  - Columbus
+  - Charlotte
+  - Indianapolis
+  - San Francisco
+  - Seattle
+  - Denver
+  - Oklahoma City
+  serp_pass_count: 11
+  serp_fail_count: 0
+  serp_redo_count: 9
+  google_completed:
+    pass: 11
+    fail: 0
+    redo: 9
+    blocked: true
+  pilot_geo: null
+  pilot_geo_type: null
+  provisional_metro_candidate: Denver
+  install_vs_repair: n/a
+  ranking_method: null
+  ranking_evidence_urls: []
+  maps_category: Dog boarding / Pet boarding service
+  fragments:
+  - overnight boarding
+  - cage-free boarding
+  - daycare add-on
+  - medication administration
+  - large-breed boarding
+  enrichment_attributes:
+  - hours
+  - reviews
+  - cage-free vs kennel
+  - vaccination requirements
+  - pricing bands
+  gate_results:
+    gate_1: PASS
+    gate_2: PASS
+    gate_3: HOLD
+    gate_4: HOLD
+    gate_5: PASS
+  yellow_flags:
+  - primary_term_not_in_live_planner_pull:dog boarding
+  - low_competition:dog daycare / pet boarding
+  - below_preferred_volume:dog daycare / pet boarding
+  - approx_bid_as_shown_in_live_note:dog daycare / pet boarding
+  evidence_urls:
+  - Knowledge/Keyword-planner-live.md
+  - Knowledge/Hub-idea-qualify-rules.md
+  - /workspace/serp-gate3-dog-boarding.json
+  - /workspace/pool-redo-progress.md
+  status: HOLD
+  fail_reasons: []
+  hold_reasons:
+  - 'Gate3 mid-run blocked: Google PASS 11 / FAIL 0 / REDO 9; blocked=true — cannot PASS until 0 REDO
+    and full 20 classifications'
+  - Gate4 pilot not selected because Gate3 did not PASS; slug/display metro Denver is provisional candidate
+    for indexing only
+- niche_slug: self-storage-jacksonville
+  display_name: Storage units Jacksonville
+  industry: Self-storage
+  localized: true
+  near_pass: false
+  run_date: '2026-09-02'
+  primary_serp_term: storage units
+  planner_country: United States
+  planner_language: English
+  planner_network: Google
+  planner_window_start: '2025-08-01'
+  planner_window_end: '2026-07-31'
+  planner_terms:
+  - term: storage units near me
+    role: commercial_local
+    intent_class: commercial_local
+    volume_range: 1M-10M
+    competition: High
+    bid_low: $4.74
+    bid_high: $20.86
+    evidence_url: Knowledge/Keyword-planner-live.md
+  - term: self storage
+    role: head
+    intent_class: commercial_local
+    volume_range: 100K-1M
+    competition: Low
+    bid_low: $4.20
+    bid_high: $17.03
+    evidence_url: Knowledge/Keyword-planner-live.md
+  policy_class: clean
+  policy_review_date: '2026-09-02'
+  policy_reviewer: Kyle
+  serp_engine: Google
+  serp_city_set_version: Directory-serp-test top-20 v1 (2026-08-30)
+  serp_query_template: '{primary_serp_term} {city}'
+  serp_results: []
+  serp_pass_cities: []
+  serp_fail_cities: []
+  serp_redo_cities: []
+  serp_pass_count: 0
+  serp_fail_count: 0
+  serp_redo_count: 0
+  google_completed:
+    pass: 0
+    fail: 0
+    redo: 0
+    blocked: false
+    not_run: true
+  pilot_geo: null
+  pilot_geo_type: null
+  provisional_metro_candidate: Jacksonville
+  install_vs_repair: n/a
+  ranking_method: null
+  ranking_evidence_urls: []
+  maps_category: Self-storage facility
+  fragments:
+  - climate-controlled
+  - drive-up access
+  - 24-hour access
+  - vehicle / boat / RV storage
+  - month-to-month
+  enrichment_attributes:
+  - hours
+  - reviews
+  - unit sizes
+  - amenities (climate, drive-up, 24hr)
+  - pricing bands
+  gate_results:
+    gate_1: PASS
+    gate_2: PASS
+    gate_3: HOLD
+    gate_4: HOLD
+    gate_5: PASS
+  yellow_flags:
+  - high_competition:storage units near me
+  - national_locator_serp_risk:Public Storage/Extra Space
+  evidence_urls:
+  - Knowledge/Keyword-planner-live.md
+  - Knowledge/Hub-idea-qualify-rules.md
+  - Knowledge/Keyword-checklist.md
+  - /workspace/hub-idea-swap-recommendation.md
+  status: HOLD
+  fail_reasons: []
+  hold_reasons:
+  - Swap-in for dumpster rental (Dave drop); Gate3 Google SERP not yet run for this niche — captcha blocked
+    prior pool niches; DDG never counts as PASS
+  - near_pass false until Google Gate3 completes with >=5 PASS and 0 REDO; provisional metros Jacksonville/Dallas/San
+    Jose are indexing candidates only; pilot_geo null

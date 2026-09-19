@@ -1,0 +1,8 @@
+{
+  "dfw-garage": {
+    "1": { "reviewSuppressBelow": 3 }
+  },
+  "fence-charlotte": {
+    "1": { "reviewSuppressBelow": 3 }
+  }
+}

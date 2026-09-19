@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "generated": "2026-09-02",
+  "defaultThemeId": "slate-amber",
+  "platformOnlyThemeIds": ["saas-indigo"],
+  "fallbackThemeId": "navy-amber",
+  "notes": "WCAG AA-oriented tokens for Big Dir CMS theme picker. Bright accent hues are for badges/icons, not button fills. Use white (#FFFFFF) for CTA label text.",
+  "themes": [
+    {
+      "id": "slate-amber",
+      "name": "Slate & Amber",
+      "vibe": "Industrial trust — steel, hardware, motors",
+      "when": "Garage doors, gates/fencing, metal roofing, overhead equipment",
+      "tokens": {
+        "primary": "#1F2937",
+        "secondary": "#475569",
+        "accent": "#F59E0B",
+        "bg": "#F8FAFC",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "muted": "#4B5563",
+        "border": "#E2E8F0",
+        "cta": "#92400E",
+        "ctaHover": "#78350F",
+        "success": "#15803D",
+        "warning": "#B45309"
+      }
+    },
+    {
+      "id": "navy-amber",
+      "name": "Trust Navy",
+      "vibe": "Licensed-insured classic; safest platform fallback",
+      "when": "General contractors, electricians, multi-vertical fallback, unknown niche",
+      "tokens": {
+        "primary": "#172B4D",
+        "secondary": "#315A7D",
+        "accent": "#D97706",
+        "bg": "#F7F8FA",
+        "surface": "#FFFFFF",
+        "text": "#172B4D",
+        "muted": "#526174",
+        "border": "#CBD5E1",
+        "cta": "#C65300",
+        "ctaHover": "#A84300",
+        "success": "#287A4B",
+        "warning": "#B45309"
+      }
+    },
+    {
+      "id": "harbor-teal",
+      "name": "Harbor Teal",
+      "vibe": "Clean water/tech feel for plumbing & pools",
+      "when": "Plumbing, drain/water heater, pool, water treatment",
+      "tokens": {
+        "primary": "#0B3B4D",
+        "secondary": "#0F766E",
+        "accent": "#38BDF8",
+        "bg": "#F5FAFA",
+        "surface": "#FFFFFF",
+        "text": "#0D1F26",
+        "muted": "#4C6B6E",
+        "border": "#D7E7E7",
+        "cta": "#0F766E",
+        "ctaHover": "#0B5A54",
+        "success": "#15803D",
+        "warning": "#B45309"
+      }
+    },
+    {
+      "id": "forest-cream",
+      "name": "Forest & Cream",
+      "vibe": "Grounded, neighborly landscaping / outdoor",
+      "when": "Landscaping, lawn, tree service, outdoor / eco-forward trades",
+      "tokens": {
+        "primary": "#254737",
+        "secondary": "#607565",
+        "accent": "#B56B35",
+        "bg": "#FAF7EF",
+        "surface": "#FFFFFF",
+        "text": "#20352A",
+        "muted": "#5F6C63",
+        "border": "#D8D4C7",
+        "cta": "#2F6B4F",
+        "ctaHover": "#24543E",
+        "success": "#2F6B4F",
+        "warning": "#A65D22"
+      }
+    },
+    {
+      "id": "brick-copper",
+      "name": "Brick & Copper",
+      "vibe": "Rugged craftsmanship; DFW brick-home warmth",
+      "when": "Roofing, masonry, hardscape; alt garage-door differentiation",
+      "tokens": {
+        "primary": "#5C2A1E",
+        "secondary": "#8C4A2F",
+        "accent": "#E0B15C",
+        "bg": "#FBF7F3",
+        "surface": "#FFFFFF",
+        "text": "#241209",
+        "muted": "#6B5142",
+        "border": "#E9DCCF",
+        "cta": "#9A3324",
+        "ctaHover": "#7A2719",
+        "success": "#3F7D4F",
+        "warning": "#B45309"
+      }
+    },
+    {
+      "id": "storm-blue",
+      "name": "Storm Blue",
+      "vibe": "Cool climate precision for HVAC / air",
+      "when": "HVAC, duct, insulation, appliance repair",
+      "tokens": {
+        "primary": "#1E2A3A",
+        "secondary": "#3E5C76",
+        "accent": "#7FB3D5",
+        "bg": "#F6F8FA",
+        "surface": "#FFFFFF",
+        "text": "#101825",
+        "muted": "#52667A",
+        "border": "#DDE4EA",
+        "cta": "#C2410C",
+        "ctaHover": "#9A3412",
+        "success": "#15803D",
+        "warning": "#B45309"
+      }
+    },
+    {
+      "id": "sandstone",
+      "name": "Sandstone Craft",
+      "vibe": "Warm editorial remodeler / design-build",
+      "when": "Remodelers, custom builders, decks/patios, design-build, higher-ticket residential",
+      "tokens": {
+        "primary": "#2B241D",
+        "secondary": "#8A6F55",
+        "accent": "#C57B3E",
+        "bg": "#F5EFE6",
+        "surface": "#FFFFFF",
+        "text": "#241F19",
+        "muted": "#6B5F52",
+        "border": "#E5DAC9",
+        "cta": "#B5541D",
+        "ctaHover": "#8F4116",
+        "success": "#3F7D4F",
+        "warning": "#B45309"
+      }
+    },
+    {
+      "id": "saas-indigo",
+      "name": "SaaS Indigo",
+      "vibe": "Platform marketing / admin only — not trade tenants",
+      "when": "Big Dir network marketing, pricing, contractor sales, admin/CMS chrome",
+      "tokens": {
+        "primary": "#211C4E",
+        "secondary": "#4338CA",
+        "accent": "#14B8A6",
+        "bg": "#F7F7FB",
+        "surface": "#FFFFFF",
+        "text": "#17152E",
+        "muted": "#55526E",
+        "border": "#E3E1F0",
+        "cta": "#4338CA",
+        "ctaHover": "#372F94",
+        "success": "#15803D",
+        "warning": "#B45309"
+      }
+    }
+  ]
+}

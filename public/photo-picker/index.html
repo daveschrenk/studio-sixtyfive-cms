@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DFW photo picker</title>
+<style>
+  :root { font-family: Georgia, serif; background: #f4efe6; color: #1c1916; }
+  body { margin: 0; }
+  header.top { position: sticky; top: 0; background: #1c1916; color: #f4efe6; padding: 12px 20px; display: flex; gap: 16px; align-items: center; z-index: 2; }
+  header.top h1 { font-size: 18px; margin: 0; font-weight: normal; }
+  header.top .count { margin-left: auto; font-family: ui-sans-serif, system-ui; font-size: 13px; }
+  header.top button { font: inherit; font-family: ui-sans-serif, system-ui; padding: 6px 12px; cursor: pointer; }
+  .lede { max-width: 820px; padding: 16px 20px 0; line-height: 1.45; }
+  .shop { padding: 20px; border-bottom: 1px solid #d9d0c3; }
+  .shop h2 { margin: 0 0 4px; font-size: 22px; }
+  .meta, .notes { margin: 0 0 8px; color: #5c5348; font-size: 14px; font-family: ui-sans-serif, system-ui; }
+  .opts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .opt { background: #fff; border: 2px solid #d9d0c3; padding: 0; text-align: left; cursor: pointer; position: relative; }
+  .opt img { width: 100%; height: 140px; object-fit: cover; display: block; background: #e8e0d4; }
+  .opt .n { position: absolute; top: 6px; left: 8px; background: #1c1916; color: #fff; font: 12px ui-sans-serif, system-ui; padding: 2px 6px; }
+  .opt .why { display: block; padding: 8px; font: 12px/1.35 ui-sans-serif, system-ui; color: #3d352c; }
+  .opt.picked { border-color: #b4532a; box-shadow: 0 0 0 2px #b4532a; }
+  .opt.warn { border-color: #a16207; }
+  .shop.done h2::after { content: " · picked"; color: #b4532a; font-size: 14px; }
+  @media (max-width: 800px) { .opts { grid-template-columns: 1fr; } .opt img { height: 180px; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>DFW garage-door install · photo picker</h1>
+  <span class="count"><span id="done">0</span> / 20 picked</span>
+  <button id="dl" type="button">Download picks</button>
+</header>
+<p class="lede">One photo per shop. Live <code>photo_url</code> stays empty until these picks land. Rank does not change. Skip any that still look like logos, catalog, or repair-only. Yellow border = flagged (off-track repair, not a finished install).</p>
+
+    <article class="shop" id="r1" data-rank="1">
+      <header>
+        <h2>#1 Alpha Omega Garage Doors</h2>
+        <p class="meta">Plano · McKinney</p>
+        <p class="notes">found 3 real from their gallery; skipped logos, catalog glass swatches, and a front-entry iron door</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="1" data-file="files/1-alpha-omega-1.jpg" data-n="1">
+          <img src="files/1-alpha-omega-1.jpg" alt="Alpha Omega Garage Doors option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed wood carriage doors on a house</span>
+        </button>
+        <button type="button" class="opt" data-rank="1" data-file="files/1-alpha-omega-2.jpg" data-n="2">
+          <img src="files/1-alpha-omega-2.jpg" alt="Alpha Omega Garage Doors option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">in-progress job: tech on ladder installing a garage-door opener</span>
+        </button>
+        <button type="button" class="opt" data-rank="1" data-file="files/1-alpha-omega-3.jpg" data-n="3">
+          <img src="files/1-alpha-omega-3.jpg" alt="Alpha Omega Garage Doors option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">installed white carriage-style doors with hardware on a house</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r2" data-rank="2">
+      <header>
+        <h2>#2 Overhead Door Company of Dallas</h2>
+        <p class="meta">Carrollton · Fort Worth, McKinney, Frisco, Denton</p>
+        <p class="notes">location and showroom pages were logos/awards only; used 3 installed-door photos from their Pictures gallery. Skipped the Home Refresh rebate banner (stock marketing). No truck/shop shots on the public site.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="2" data-file="files/2-overhead-door-dallas-1.webp" data-n="1">
+          <img src="files/2-overhead-door-dallas-1.webp" alt="Overhead Door Company of Dallas option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed wood-look carriage doors on a house (Impression fiberglass after)</span>
+        </button>
+        <button type="button" class="opt" data-rank="2" data-file="files/2-overhead-door-dallas-2.webp" data-n="2">
+          <img src="files/2-overhead-door-dallas-2.webp" alt="Overhead Door Company of Dallas option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed dark carriage-house door on a brick house</span>
+        </button>
+        <button type="button" class="opt" data-rank="2" data-file="files/2-overhead-door-dallas-3.webp" data-n="3">
+          <img src="files/2-overhead-door-dallas-3.webp" alt="Overhead Door Company of Dallas option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">installed arched custom-wood doors on a stone house</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r3" data-rank="3">
+      <header>
+        <h2>#3 Doorvana Garage Doors</h2>
+        <p class="meta">Fort Worth · Fort Worth</p>
+        <p class="notes">kept existing photo_url as option 1; pulled 2 more distinct installs from their job gallery. Plenty of real house shots.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="3" data-file="files/3-doorvana-1.jpg" data-n="1">
+          <img src="files/3-doorvana-1.jpg" alt="Doorvana Garage Doors option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed white carriage door on a shingle house (kept existing listing photo_url as option 1)</span>
+        </button>
+        <button type="button" class="opt" data-rank="3" data-file="files/3-doorvana-2.jpeg" data-n="2">
+          <img src="files/3-doorvana-2.jpeg" alt="Doorvana Garage Doors option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed full-view glass garage door on a Dallas house</span>
+        </button>
+        <button type="button" class="opt" data-rank="3" data-file="files/3-doorvana-3.jpg" data-n="3">
+          <img src="files/3-doorvana-3.jpg" alt="Doorvana Garage Doors option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">installed wood X-brace carriage door on a farmhouse</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r4" data-rank="4">
+      <header>
+        <h2>#4 Johnny B&#x27;s Garage Doors And Service</h2>
+        <p class="meta">Fort Worth · Fort Worth, Denton</p>
+        <p class="notes">kept existing photo_url as option 1 (real opener install). Gallery has many dated job shots; picked two distinct house installs. Also had an in-progress interior with ladder if needed.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="4" data-file="files/4-johnny-bs-1.webp" data-n="1">
+          <img src="files/4-johnny-bs-1.webp" alt="Johnny B&#x27;s Garage Doors And Service option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed Chamberlain opener in a residential garage (kept existing listing photo_url as option 1)</span>
+        </button>
+        <button type="button" class="opt" data-rank="4" data-file="files/4-johnny-bs-2.webp" data-n="2">
+          <img src="files/4-johnny-bs-2.webp" alt="Johnny B&#x27;s Garage Doors And Service option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed black modern garage doors on a house</span>
+        </button>
+        <button type="button" class="opt" data-rank="4" data-file="files/4-johnny-bs-3.webp" data-n="3">
+          <img src="files/4-johnny-bs-3.webp" alt="Johnny B&#x27;s Garage Doors And Service option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">installed tan paneled doors on a brick house</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r5" data-rank="5">
+      <header>
+        <h2>#5 Family Christian Doors Fort Worth</h2>
+        <p class="meta">Fort Worth · Fort Worth, Frisco, Denton</p>
+        <p class="notes">site gallery is almost all Clopay manufacturer catalog; skipped those. Used 2 real shots from the homepage plus 1 public Nextdoor business-gallery install. No branded truck found. Option 1 is an off-track repair shot; skip it for an install card.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt warn" data-rank="5" data-file="files/5-family-christian-doors-1.jpg" data-n="1">
+          <img src="files/5-family-christian-doors-1.jpg" alt="Family Christian Doors Fort Worth option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">off-track damaged door (repair call, not a finished install)</span>
+        </button>
+        <button type="button" class="opt" data-rank="5" data-file="files/5-family-christian-doors-2.png" data-n="2">
+          <img src="files/5-family-christian-doors-2.png" alt="Family Christian Doors Fort Worth option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed three wood-look garage doors on a house</span>
+        </button>
+        <button type="button" class="opt" data-rank="5" data-file="files/5-family-christian-doors-3.jpg" data-n="3">
+          <img src="files/5-family-christian-doors-3.jpg" alt="Family Christian Doors Fort Worth option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">installed three arched carriage doors on a brick house</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r6" data-rank="6">
+      <header>
+        <h2>#6 Ellis Overhead Doors</h2>
+        <p class="meta">Van Alstyne · Celina, McKinney, Princeton, Frisco, Denton, Anna, Melissa</p>
+        <p class="notes">found 3 real from their project pages (Gray / Black / Full-view). Also had a commercial high-lift interior if a 4th were needed.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="6" data-file="files/6-ellis-overhead-1.jpg" data-n="1">
+          <img src="files/6-ellis-overhead-1.jpg" alt="Ellis Overhead Doors option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed gray garage door on a brick house</span>
+        </button>
+        <button type="button" class="opt" data-rank="6" data-file="files/6-ellis-overhead-2.jpg" data-n="2">
+          <img src="files/6-ellis-overhead-2.jpg" alt="Ellis Overhead Doors option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed black garage door on a metal outbuilding</span>
+        </button>
+        <button type="button" class="opt" data-rank="6" data-file="files/6-ellis-overhead-3.jpg" data-n="3">
+          <img src="files/6-ellis-overhead-3.jpg" alt="Ellis Overhead Doors option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">installed full-view glass garage doors on a brick house</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r7" data-rank="7">
+      <header>
+        <h2>#7 Tarrant County Door &amp; Gate</h2>
+        <p class="meta">North Richland Hills · Fort Worth</p>
+        <p class="notes">found 3 real Facebook job shots from their gallery. Skipped a 3D van render and one photo that appeared to show another shop&#x27;s shirt.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="7" data-file="files/7-tarrant-county-door-gate-1.jpg" data-n="1">
+          <img src="files/7-tarrant-county-door-gate-1.jpg" alt="Tarrant County Door &amp; Gate option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed white paneled door on a tan stucco house</span>
+        </button>
+        <button type="button" class="opt" data-rank="7" data-file="files/7-tarrant-county-door-gate-2.jpg" data-n="2">
+          <img src="files/7-tarrant-county-door-gate-2.jpg" alt="Tarrant County Door &amp; Gate option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed white carriage-style door on a house</span>
+        </button>
+        <button type="button" class="opt" data-rank="7" data-file="files/7-tarrant-county-door-gate-3.webp" data-n="3">
+          <img src="files/7-tarrant-county-door-gate-3.webp" alt="Tarrant County Door &amp; Gate option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">installed two white doors on a brick house with a service truck at the curb</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r8" data-rank="8">
+      <header>
+        <h2>#8 M&amp;M Garage Door Services</h2>
+        <p class="meta">Dallas · McKinney, Frisco</p>
+        <p class="notes">found 3 real from their site (house install, job+truck, branded truck). Skipped a hero photo branded PRIMARY, not this shop.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="8" data-file="files/8-mm-garage-door-services-1.webp" data-n="1">
+          <img src="files/8-mm-garage-door-services-1.webp" alt="M&amp;M Garage Door Services option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed white garage door on a two-story house</span>
+        </button>
+        <button type="button" class="opt" data-rank="8" data-file="files/8-mm-garage-door-services-2.webp" data-n="2">
+          <img src="files/8-mm-garage-door-services-2.webp" alt="M&amp;M Garage Door Services option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">in-progress job at a home with branded service truck in the driveway</span>
+        </button>
+        <button type="button" class="opt" data-rank="8" data-file="files/8-mm-garage-door-services-3.webp" data-n="3">
+          <img src="files/8-mm-garage-door-services-3.webp" alt="M&amp;M Garage Door Services option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">branded M&amp;M service truck at the shop bay</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r10" data-rank="10">
+      <header>
+        <h2>#10 Professional Garage Concepts</h2>
+        <p class="meta">Keller · McKinney, Frisco, Denton, Dallas–Fort Worth hub</p>
+        <p class="notes">found 3 real from Our Work gallery. Homepage heroes were luxury/stock-looking with no door; gallery also has many floor-coating shots we skipped.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="10" data-file="files/10-professional-garage-concepts-1.webp" data-n="1">
+          <img src="files/10-professional-garage-concepts-1.webp" alt="Professional Garage Concepts option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed cream paneled garage door on a brick house</span>
+        </button>
+        <button type="button" class="opt" data-rank="10" data-file="files/10-professional-garage-concepts-2.webp" data-n="2">
+          <img src="files/10-professional-garage-concepts-2.webp" alt="Professional Garage Concepts option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">service truck at a home, shot from inside the open garage</span>
+        </button>
+        <button type="button" class="opt" data-rank="10" data-file="files/10-professional-garage-concepts-3.webp" data-n="3">
+          <img src="files/10-professional-garage-concepts-3.webp" alt="Professional Garage Concepts option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">interior of an installed wood sectional door with tracks and opener</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r13" data-rank="13">
+      <header>
+        <h2>#13 Artex Overhead Door Company</h2>
+        <p class="meta">Arlington · Celina, Dallas–Fort Worth hub</p>
+        <p class="notes">found 3 real (truck+glass install, house door, in-progress). Skipped all iStock files on the homepage.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="13" data-file="files/13-artex-overhead-door-1.jpg" data-n="1">
+          <img src="files/13-artex-overhead-door-1.jpg" alt="Artex Overhead Door Company option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">branded Artex service truck at a home with an installed glass garage door</span>
+        </button>
+        <button type="button" class="opt" data-rank="13" data-file="files/13-artex-overhead-door-2.jpg" data-n="2">
+          <img src="files/13-artex-overhead-door-2.jpg" alt="Artex Overhead Door Company option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed dark wood-look garage door on a brick house</span>
+        </button>
+        <button type="button" class="opt" data-rank="13" data-file="files/13-artex-overhead-door-3.jpg" data-n="3">
+          <img src="files/13-artex-overhead-door-3.jpg" alt="Artex Overhead Door Company option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">in-progress job: door panel cutouts with tools on the concrete</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r21" data-rank="21">
+      <header>
+        <h2>#21 North Texas Garage Doors and Gates</h2>
+        <p class="meta">Grapevine · Celina, Dallas–Fort Worth hub</p>
+        <p class="notes">found 3 real from the homepage/gallery jpegs. Skipped brand logos, modified PNG illustrations, and a commercial sliding-gate shot.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="21" data-file="files/21-north-texas-1.jpeg" data-n="1">
+          <img src="files/21-north-texas-1.jpeg" alt="North Texas Garage Doors and Gates option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed dark wood-grain sectional door on a stucco house</span>
+        </button>
+        <button type="button" class="opt" data-rank="21" data-file="files/21-north-texas-2.jpeg" data-n="2">
+          <img src="files/21-north-texas-2.jpeg" alt="North Texas Garage Doors and Gates option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed arched wood carriage door on a stone house</span>
+        </button>
+        <button type="button" class="opt" data-rank="21" data-file="files/21-north-texas-3.jpeg" data-n="3">
+          <img src="files/21-north-texas-3.jpeg" alt="North Texas Garage Doors and Gates option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">in-progress job: residential sectional door from the garage interior</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r22" data-rank="22">
+      <header>
+        <h2>#22 American Overhead Garage Door Repair</h2>
+        <p class="meta">Lavon · Dallas–Fort Worth hub</p>
+        <p class="notes">found 3 real on the homepage. Skipped Frame/Group logo graphics, cropped icons, and the red-to-blue gradient house banner.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="22" data-file="files/22-american-overhead-1.webp" data-n="1">
+          <img src="files/22-american-overhead-1.webp" alt="American Overhead Garage Door Repair option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed wood-grain door with side windows on a brick house</span>
+        </button>
+        <button type="button" class="opt" data-rank="22" data-file="files/22-american-overhead-2.jpg" data-n="2">
+          <img src="files/22-american-overhead-2.jpg" alt="American Overhead Garage Door Repair option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">in-progress job: tech on a ladder installing a Genie opener</span>
+        </button>
+        <button type="button" class="opt" data-rank="22" data-file="files/22-american-overhead-3.jpg" data-n="3">
+          <img src="files/22-american-overhead-3.jpg" alt="American Overhead Garage Door Repair option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">in-progress job: tech in a residential garage with tools and cables</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r23" data-rank="23">
+      <header>
+        <h2>#23 Dick Does Doors</h2>
+        <p class="meta">Frisco · Anna, Dallas–Fort Worth hub</p>
+        <p class="notes">homepage is JS-rendered without img tags; pulled 3 real job photos from public WP media used on the site. Skipped logos, Elementor screenshots, and isolated spring close-ups.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="23" data-file="files/23-dick-does-doors-1.jpg" data-n="1">
+          <img src="files/23-dick-does-doors-1.jpg" alt="Dick Does Doors option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed light-gray carriage door with windows and hardware on a house</span>
+        </button>
+        <button type="button" class="opt" data-rank="23" data-file="files/23-dick-does-doors-2.jpeg" data-n="2">
+          <img src="files/23-dick-does-doors-2.jpeg" alt="Dick Does Doors option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">in-progress job: techs installing a sectional door with springs on the floor</span>
+        </button>
+        <button type="button" class="opt" data-rank="23" data-file="files/23-dick-does-doors-3.jpg" data-n="3">
+          <img src="files/23-dick-does-doors-3.jpg" alt="Dick Does Doors option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">in-progress job: tech attaching decorative hardware on a new carriage door</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r30" data-rank="30">
+      <header>
+        <h2>#30 Your Garage Door Guys</h2>
+        <p class="meta">Rockwall · Princeton, Anna, Melissa</p>
+        <p class="notes">found 3 real on the homepage. Skipped manufacturer logos (Haas/CHI/Amarr/Clopay), Pexels stock, LiftMaster promo art, and the isolated truck cutout on black.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="30" data-file="files/30-your-garage-door-guys-1.webp" data-n="1">
+          <img src="files/30-your-garage-door-guys-1.webp" alt="Your Garage Door Guys option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">branded Your Garage Door Guys service truck at a job site</span>
+        </button>
+        <button type="button" class="opt" data-rank="30" data-file="files/30-your-garage-door-guys-2.webp" data-n="2">
+          <img src="files/30-your-garage-door-guys-2.webp" alt="Your Garage Door Guys option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">in-progress job: tech welding a commercial full-view glass door</span>
+        </button>
+        <button type="button" class="opt" data-rank="30" data-file="files/30-your-garage-door-guys-3.webp" data-n="3">
+          <img src="files/30-your-garage-door-guys-3.webp" alt="Your Garage Door Guys option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">installed commercial roll-up overhead door in a warehouse</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r33" data-rank="33">
+      <header>
+        <h2>#33 Reliable Garage Door Repair</h2>
+        <p class="meta">Celina · Celina, Princeton</p>
+        <p class="notes">found 3 real from the project gallery. Homepage hero/service cards look like marketing composites; skipped those plus the 24-hour icon graphics.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="33" data-file="files/33-reliable-1.jpg" data-n="1">
+          <img src="files/33-reliable-1.jpg" alt="Reliable Garage Door Repair option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed white windowed sectional door on a brick Dallas house</span>
+        </button>
+        <button type="button" class="opt" data-rank="33" data-file="files/33-reliable-2.jpg" data-n="2">
+          <img src="files/33-reliable-2.jpg" alt="Reliable Garage Door Repair option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed cream carriage door with black hardware on a brick house</span>
+        </button>
+        <button type="button" class="opt" data-rank="33" data-file="files/33-reliable-3.jpg" data-n="3">
+          <img src="files/33-reliable-3.jpg" alt="Reliable Garage Door Repair option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">in-progress job: cream door on a brick house with a loaded service truck</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r35" data-rank="35">
+      <header>
+        <h2>#35 Supreme Garage Door Repair</h2>
+        <p class="meta">Fort Worth · Celina</p>
+        <p class="notes">found 3 real from the Fort Worth page and gallery. Skipped ChatGPT/AI banners, BBB/chamber badges, and a Minneapolis minivan filename that is not this shop.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="35" data-file="files/35-supreme-1.jpeg" data-n="1">
+          <img src="files/35-supreme-1.jpeg" alt="Supreme Garage Door Repair option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed white raised-panel door on a brick house with a service truck at the curb</span>
+        </button>
+        <button type="button" class="opt" data-rank="35" data-file="files/35-supreme-2.webp" data-n="2">
+          <img src="files/35-supreme-2.webp" alt="Supreme Garage Door Repair option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed brown carriage-house door on a stone house</span>
+        </button>
+        <button type="button" class="opt" data-rank="35" data-file="files/35-supreme-3.webp" data-n="3">
+          <img src="files/35-supreme-3.webp" alt="Supreme Garage Door Repair option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">branded SGD service truck at a home during a dusk repair</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r37" data-rank="37">
+      <header>
+        <h2>#37 Anna&#x27;s Best Garage &amp; Overhead Doors</h2>
+        <p class="meta">Anna · Anna, Melissa</p>
+        <p class="notes">found 3 real from homepage/gallery. Skipped clipart, rating badges, and a matching-uniform stock-style shop interior.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="37" data-file="files/37-annas-best-1.jpeg" data-n="1">
+          <img src="files/37-annas-best-1.jpeg" alt="Anna&#x27;s Best Garage &amp; Overhead Doors option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed white X-brace carriage doors on a gray-siding house</span>
+        </button>
+        <button type="button" class="opt" data-rank="37" data-file="files/37-annas-best-2.jpeg" data-n="2">
+          <img src="files/37-annas-best-2.jpeg" alt="Anna&#x27;s Best Garage &amp; Overhead Doors option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed tan paneled doors with stone columns on a house</span>
+        </button>
+        <button type="button" class="opt" data-rank="37" data-file="files/37-annas-best-3.jpg" data-n="3">
+          <img src="files/37-annas-best-3.jpg" alt="Anna&#x27;s Best Garage &amp; Overhead Doors option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">in-progress job: tech winding a torsion spring in a residential garage</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r39" data-rank="39">
+      <header>
+        <h2>#39 Tru-Roll Overhead Door</h2>
+        <p class="meta">Pilot Point · Anna, Melissa</p>
+        <p class="notes">found 3 real from the Thryv homepage gallery. Skipped tiny 5KB graphics, partner logos, and a blanked-out shop-front thumb.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="39" data-file="files/39-tru-roll-1.jpg" data-n="1">
+          <img src="files/39-tru-roll-1.jpg" alt="Tru-Roll Overhead Door option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed dark wood-look doors on a two-story house</span>
+        </button>
+        <button type="button" class="opt" data-rank="39" data-file="files/39-tru-roll-2.jpg" data-n="2">
+          <img src="files/39-tru-roll-2.jpg" alt="Tru-Roll Overhead Door option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">installed carriage-style door with hardware on a stone house</span>
+        </button>
+        <button type="button" class="opt" data-rank="39" data-file="files/39-tru-roll-3.jpg" data-n="3">
+          <img src="files/39-tru-roll-3.jpg" alt="Tru-Roll Overhead Door option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">installed commercial roll-up doors in a self-storage corridor</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r40" data-rank="40">
+      <header>
+        <h2>#40 Precision Garage Door of Dallas</h2>
+        <p class="meta">Dallas · Princeton, Melissa</p>
+        <p class="notes">found 3 real on the homepage. Skipped employee headshots, affiliation badges, a van mockup on black, and the green-filter composite header.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="40" data-file="files/40-precision-dallas-1.jpg" data-n="1">
+          <img src="files/40-precision-dallas-1.jpg" alt="Precision Garage Door of Dallas option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">in-progress job: Precision-branded tech working a sectional door at a house</span>
+        </button>
+        <button type="button" class="opt" data-rank="40" data-file="files/40-precision-dallas-2.jpg" data-n="2">
+          <img src="files/40-precision-dallas-2.jpg" alt="Precision Garage Door of Dallas option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">in-progress job: tech installing a LiftMaster opener</span>
+        </button>
+        <button type="button" class="opt" data-rank="40" data-file="files/40-precision-dallas-3.jpg" data-n="3">
+          <img src="files/40-precision-dallas-3.jpg" alt="Precision Garage Door of Dallas option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">installed beige carriage-house door on a white brick house</span>
+        </button></div>
+    </article>
+    <article class="shop" id="r46" data-rank="46">
+      <header>
+        <h2>#46 A1 Affordable Garage Door Services</h2>
+        <p class="meta">Plano · Princeton</p>
+        <p class="notes">found 3 real on the homepage. Skipped EPA/Lead-safe badge, manufacturer catalog shots (Windsor/Amarr), and logo wordmarks. Option 2 is an off-track repair shot; skip it for an install card.</p>
+      </header>
+      <div class="opts">
+        <button type="button" class="opt" data-rank="46" data-file="files/46-a1-affordable-1.png" data-n="1">
+          <img src="files/46-a1-affordable-1.png" alt="A1 Affordable Garage Door Services option 1" loading="lazy">
+          <span class="n">1</span>
+          <span class="why">installed custom cedar carriage doors on a brick house</span>
+        </button>
+        <button type="button" class="opt warn" data-rank="46" data-file="files/46-a1-affordable-2.jpg" data-n="2">
+          <img src="files/46-a1-affordable-2.jpg" alt="A1 Affordable Garage Door Services option 2" loading="lazy">
+          <span class="n">2</span>
+          <span class="why">off-track damaged door (repair call, not a finished install)</span>
+        </button>
+        <button type="button" class="opt" data-rank="46" data-file="files/46-a1-affordable-3.png" data-n="3">
+          <img src="files/46-a1-affordable-3.png" alt="A1 Affordable Garage Door Services option 3" loading="lazy">
+          <span class="n">3</span>
+          <span class="why">branded A1 Affordable Garage Door Services service truck</span>
+        </button></div>
+    </article>
+<script>
+const picks = JSON.parse(localStorage.getItem("dfw-photo-picks") || "{}");
+function paint() {
+  document.querySelectorAll(".opt").forEach(btn => {
+    const r = btn.dataset.rank;
+    btn.classList.toggle("picked", picks[r] && picks[r].file === btn.dataset.file);
+  });
+  document.querySelectorAll(".shop").forEach(s => {
+    s.classList.toggle("done", Boolean(picks[s.dataset.rank]));
+  });
+  document.getElementById("done").textContent = Object.keys(picks).length;
+  localStorage.setItem("dfw-photo-picks", JSON.stringify(picks));
+}
+document.querySelectorAll(".opt").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const rank = btn.dataset.rank;
+    const shop = btn.closest(".shop").querySelector("h2").textContent;
+    picks[rank] = { rank: Number(rank), name: shop.replace(/^#\d+\s/, ""), file: btn.dataset.file, n: Number(btn.dataset.n) };
+    paint();
+  });
+});
+document.getElementById("dl").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify({ picked: Object.values(picks) }, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "photo-picks.json";
+  a.click();
+});
+paint();
+</script>
+</body>
+</html>

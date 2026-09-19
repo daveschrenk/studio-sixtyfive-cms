@@ -1,0 +1,23 @@
+# Dependencies and Next.js output
+node_modules/
+.next/
+out/
+
+# Local and hosted-platform metadata
+.vercel/
+
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+*.pem
+*service-account*.json
+studio-sixtyfive-cms-*.json
+
+# TypeScript and test output
+*.tsbuildinfo
+coverage/
+
+# OS and editor files
+.DS_Store
+*.swp

@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-paper: #F8FAFC;
+  --color-cream: #FFFFFF;
+  --color-ink: #111827;
+  --color-muted: #4B5563;
+  --color-rule: #E2E8F0;
+  --color-rust: #92400E;
+  --color-rust-dark: #78350F;
+  --color-primary: #1F2937;
+  --color-secondary: #475569;
+  --color-moss: #1F2937;
+  --color-clay: #475569;
+  --color-accent: #F59E0B;
+  --color-success: #15803D;
+  --color-warning: #B45309;
+}
+
+
+[data-theme="admin-cms"] {
+  color-scheme: dark;
+  --color-paper: #0f1419;
+  --color-cream: #1a222c;
+  --color-ink: #e8eef4;
+  --color-muted: #9aa7b5;
+  --color-rule: #2a3542;
+  --color-rust: #7dd3fc;
+  --color-rust-dark: #38bdf8;
+  --color-primary: #e8eef4;
+  --color-secondary: #94a3b8;
+  --color-moss: #cbd5e1;
+  --color-clay: #64748b;
+  --color-accent: #38bdf8;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+}
+
+[data-theme="slate-amber"] {
+  --color-paper: #F8FAFC;
+  --color-cream: #FFFFFF;
+  --color-ink: #111827;
+  --color-muted: #4B5563;
+  --color-rule: #E2E8F0;
+  --color-rust: #92400E;
+  --color-rust-dark: #78350F;
+  --color-primary: #1F2937;
+  --color-secondary: #475569;
+  --color-moss: #1F2937;
+  --color-clay: #475569;
+  --color-accent: #F59E0B;
+  --color-success: #15803D;
+  --color-warning: #B45309;
+}
+
+[data-theme="navy-amber"] {
+  --color-paper: #F7F8FA;
+  --color-cream: #FFFFFF;
+  --color-ink: #172B4D;
+  --color-muted: #526174;
+  --color-rule: #CBD5E1;
+  --color-rust: #C65300;
+  --color-rust-dark: #A84300;
+  --color-primary: #172B4D;
+  --color-secondary: #315A7D;
+  --color-moss: #172B4D;
+  --color-clay: #315A7D;
+  --color-accent: #D97706;
+  --color-success: #287A4B;
+  --color-warning: #B45309;
+}
+
+[data-theme="harbor-teal"] {
+  --color-paper: #F5FAFA;
+  --color-cream: #FFFFFF;
+  --color-ink: #0D1F26;
+  --color-muted: #4C6B6E;
+  --color-rule: #D7E7E7;
+  --color-rust: #0F766E;
+  --color-rust-dark: #0B5A54;
+  --color-primary: #0B3B4D;
+  --color-secondary: #0F766E;
+  --color-moss: #0B3B4D;
+  --color-clay: #0F766E;
+  --color-accent: #38BDF8;
+  --color-success: #15803D;
+  --color-warning: #B45309;
+}
+
+[data-theme="forest-cream"] {
+  --color-paper: #FAF7EF;
+  --color-cream: #FFFFFF;
+  --color-ink: #20352A;
+  --color-muted: #5F6C63;
+  --color-rule: #D8D4C7;
+  --color-rust: #2F6B4F;
+  --color-rust-dark: #24543E;
+  --color-primary: #254737;
+  --color-secondary: #607565;
+  --color-moss: #254737;
+  --color-clay: #607565;
+  --color-accent: #B56B35;
+  --color-success: #2F6B4F;
+  --color-warning: #A65D22;
+}
+
+[data-theme="brick-copper"] {
+  --color-paper: #FBF7F3;
+  --color-cream: #FFFFFF;
+  --color-ink: #241209;
+  --color-muted: #6B5142;
+  --color-rule: #E9DCCF;
+  --color-rust: #9A3324;
+  --color-rust-dark: #7A2719;
+  --color-primary: #5C2A1E;
+  --color-secondary: #8C4A2F;
+  --color-moss: #5C2A1E;
+  --color-clay: #8C4A2F;
+  --color-accent: #E0B15C;
+  --color-success: #3F7D4F;
+  --color-warning: #B45309;
+}
+
+[data-theme="storm-blue"] {
+  --color-paper: #F6F8FA;
+  --color-cream: #FFFFFF;
+  --color-ink: #101825;
+  --color-muted: #52667A;
+  --color-rule: #DDE4EA;
+  --color-rust: #C2410C;
+  --color-rust-dark: #9A3412;
+  --color-primary: #1E2A3A;
+  --color-secondary: #3E5C76;
+  --color-moss: #1E2A3A;
+  --color-clay: #3E5C76;
+  --color-accent: #7FB3D5;
+  --color-success: #15803D;
+  --color-warning: #B45309;
+}
+
+[data-theme="sandstone"] {
+  --color-paper: #F5EFE6;
+  --color-cream: #FFFFFF;
+  --color-ink: #241F19;
+  --color-muted: #6B5F52;
+  --color-rule: #E5DAC9;
+  --color-rust: #B5541D;
+  --color-rust-dark: #8F4116;
+  --color-primary: #2B241D;
+  --color-secondary: #8A6F55;
+  --color-moss: #2B241D;
+  --color-clay: #8A6F55;
+  --color-accent: #C57B3E;
+  --color-success: #3F7D4F;
+  --color-warning: #B45309;
+}
+
+[data-theme="saas-indigo"] {
+  --color-paper: #F7F7FB;
+  --color-cream: #FFFFFF;
+  --color-ink: #17152E;
+  --color-muted: #55526E;
+  --color-rule: #E3E1F0;
+  --color-rust: #4338CA;
+  --color-rust-dark: #372F94;
+  --color-primary: #211C4E;
+  --color-secondary: #4338CA;
+  --color-moss: #211C4E;
+  --color-clay: #4338CA;
+  --color-accent: #14B8A6;
+  --color-success: #15803D;
+  --color-warning: #B45309;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-rule);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rust);
+  outline-offset: 2px;
+}
+
+.drop-rule {
+  border-top: 1px solid var(--color-rule);
+}
+
+.lede p + p {
+  margin-top: 1rem;
+}
+
+.toc-link[aria-current="true"] {
+  color: var(--color-rust);
+  font-weight: 600;
+}
+
+.listing-photo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

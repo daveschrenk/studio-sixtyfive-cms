@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Fill-pool metro candidates",
+    "notes": "Prefer unused vs pool pilots (Dallas, Charlotte, Denver, Jacksonville). Oklahoma City ok for other niches. Populations are static Census-ish metro estimates for Gate4 static checks only — not Planner."
+  },
+  "metros": [
+    {
+      "slug": "tampa",
+      "short_name": "Tampa",
+      "state": "FL",
+      "population": 3286000
+    },
+    {
+      "slug": "nashville",
+      "short_name": "Nashville",
+      "state": "TN",
+      "population": 2087000
+    },
+    {
+      "slug": "kansas-city",
+      "short_name": "Kansas City",
+      "state": "MO",
+      "population": 2209000
+    },
+    {
+      "slug": "portland",
+      "short_name": "Portland",
+      "state": "OR",
+      "population": 2512000
+    },
+    {
+      "slug": "raleigh",
+      "short_name": "Raleigh",
+      "state": "NC",
+      "population": 1509000
+    },
+    {
+      "slug": "salt-lake-city",
+      "short_name": "Salt Lake City",
+      "state": "UT",
+      "population": 1287000
+    },
+    {
+      "slug": "milwaukee",
+      "short_name": "Milwaukee",
+      "state": "WI",
+      "population": 1566000
+    },
+    {
+      "slug": "oklahoma-city",
+      "short_name": "Oklahoma City",
+      "state": "OK",
+      "population": 1470000
+    },
+    {
+      "slug": "richmond",
+      "short_name": "Richmond",
+      "state": "VA",
+      "population": 1349000
+    },
+    {
+      "slug": "boise",
+      "short_name": "Boise",
+      "state": "ID",
+      "population": 811000
+    }
+  ]
+}

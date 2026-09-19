@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Fill-pool industry catalog",
+    "notes": "Curated home/local services not already in hub-idea-pool (excludes towing, fence, tree-service, dog-boarding, self-storage, garage-door). policy_class: clean|deny|adjacent."
+  },
+  "industries": [
+    {
+      "slug": "dumpster-rental",
+      "display_name": "Dumpster rental",
+      "primary_serp_term": "dumpster rental",
+      "maps_category": "Dumpster rental service",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "pressure-washing",
+      "display_name": "Pressure washing",
+      "primary_serp_term": "pressure washing",
+      "maps_category": "Pressure washing service",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "gutter-cleaning",
+      "display_name": "Gutter cleaning",
+      "primary_serp_term": "gutter cleaning",
+      "maps_category": "Gutter cleaning service",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "pest-control",
+      "display_name": "Pest control",
+      "primary_serp_term": "pest control",
+      "maps_category": "Pest control service",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "lawn-care",
+      "display_name": "Lawn care",
+      "primary_serp_term": "lawn care",
+      "maps_category": "Lawn care service",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "pool-cleaning",
+      "display_name": "Pool cleaning",
+      "primary_serp_term": "pool cleaning",
+      "maps_category": "Pool cleaning service",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "moving-company",
+      "display_name": "Moving company",
+      "primary_serp_term": "movers",
+      "maps_category": "Moving company",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "carpet-cleaning",
+      "display_name": "Carpet cleaning",
+      "primary_serp_term": "carpet cleaning",
+      "maps_category": "Carpet cleaning service",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "window-cleaning",
+      "display_name": "Window cleaning",
+      "primary_serp_term": "window cleaning",
+      "maps_category": "Window cleaning service",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "appliance-repair",
+      "display_name": "Appliance repair",
+      "primary_serp_term": "appliance repair",
+      "maps_category": "Appliance repair service",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "chimney-sweep",
+      "display_name": "Chimney sweep",
+      "primary_serp_term": "chimney sweep",
+      "maps_category": "Chimney sweep",
+      "policy_class": "clean"
+    },
+    {
+      "slug": "locksmith",
+      "display_name": "Locksmith",
+      "primary_serp_term": "locksmith",
+      "maps_category": "Locksmith",
+      "policy_class": "adjacent"
+    }
+  ]
+}

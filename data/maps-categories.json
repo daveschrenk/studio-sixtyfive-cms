@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Maps categories + fragments for Gate5 static checks",
+    "notes": "Curated; no live Maps calls in MVP."
+  },
+  "by_industry_slug": {
+    "dumpster-rental": {
+      "maps_category": "Dumpster rental service",
+      "fragments": ["10-yard", "20-yard", "30-yard", "same-day", "residential", "commercial"]
+    },
+    "pressure-washing": {
+      "maps_category": "Pressure washing service",
+      "fragments": ["house wash", "driveway", "roof soft wash", "commercial", "deck"]
+    },
+    "gutter-cleaning": {
+      "maps_category": "Gutter cleaning service",
+      "fragments": ["gutter guards", "downspout clearing", "two-story", "leaf removal"]
+    },
+    "pest-control": {
+      "maps_category": "Pest control service",
+      "fragments": ["termite", "rodent", "bed bug", "mosquito", "one-time vs recurring"]
+    },
+    "lawn-care": {
+      "maps_category": "Lawn care service",
+      "fragments": ["mowing", "fertilization", "aeration", "weed control", "seasonal cleanup"]
+    },
+    "pool-cleaning": {
+      "maps_category": "Pool cleaning service",
+      "fragments": ["weekly service", "green pool", "saltwater", "filter clean", "opening/closing"]
+    },
+    "moving-company": {
+      "maps_category": "Moving company",
+      "fragments": ["local move", "long-distance", "packing", "piano", "apartment"]
+    },
+    "carpet-cleaning": {
+      "maps_category": "Carpet cleaning service",
+      "fragments": ["steam clean", "pet odor", "upholstery", "area rugs", "commercial"]
+    },
+    "window-cleaning": {
+      "maps_category": "Window cleaning service",
+      "fragments": ["interior/exterior", "high-rise", "screen cleaning", "solar panels", "residential"]
+    },
+    "appliance-repair": {
+      "maps_category": "Appliance repair service",
+      "fragments": ["refrigerator", "washer/dryer", "dishwasher", "oven", "same-day"]
+    },
+    "chimney-sweep": {
+      "maps_category": "Chimney sweep",
+      "fragments": ["inspection", "creosote removal", "fireplace", "liner", "animal removal"]
+    },
+    "locksmith": {
+      "maps_category": "Locksmith",
+      "fragments": ["car lockout", "rekey", "deadbolt install", "safe", "24/7"]
+    },
+    "garage-door": {
+      "maps_category": "Garage door supplier",
+      "fragments": ["spring repair", "opener", "install", "commercial"]
+    }
+  }
+}
